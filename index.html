@@ -4,9 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Вебдизайн и разработка сайтов</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="src/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500&display=swap&subset=cyrillic" rel="stylesheet">   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="res/style.css"/>
+    <link rel="prerender" href="projects.html"/>
+    <link rel="prefetch" href="https://kit.fontawesome.com/f64e6284ab.js" as="script"/>
 </head>
 <body>
-    
+    <!--navbar-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#home" data-value="home"><img  src="src/img/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#about" data-value="about">Обо мне <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#portfolio" data-value="portfolio">Портфолио</a>
+                <a class="nav-item nav-link" href="#dev_process" data-value="dev_process">Процесс разработки</a>
+                <a class="nav-item nav-link" href="#blog" data-value="blog">Блог</a>
+                <a class="nav-item nav-link" href="#contacts" data-value="contacts">Контакты</a>
+            </div>
+            <div class="lang-select">
+                <span>ua</span>
+                <span>en</span>
+                <span>ru</span>
+            </div>
+        </div>
+    </nav>
+    <!--first screen-->
+    <div id="home" class="container-fluid first-screen">
+        <div class="row">
+            <div class="jumbotron col-lg-10 col-xl-10">
+                <h1 class="display-4">Дизайн и разработка сайтов.<br>
+                    
+                </h1>
+                <p class="lead">Информационный сайт / сайт-портфолио / продающий лэндинг / блог / интернет магазин / дизайн полиграфии</p>
+                <hr class="my-4">
+                <a class="btn btn-success btn-lg" href="#about" data-value="about" role="button">Узнать больше...</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="res/main.js"></script>
 </body>
 </html>
