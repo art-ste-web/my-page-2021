@@ -29,3 +29,15 @@ $(function() {
   $('.lazy').Lazy();
 });
 
+//switch language
+const langBtns = document.querySelectorAll(".lang-btn");
+
+for(let i=0; i<langBtns.length; i++) {
+  [i].addEventListener('click',switchLang); 
+}
+console.log(langBtns);
+function switchLang(langItem) {
+  const html = document.getElementsByTagName("html");
+  langItem
+}
+

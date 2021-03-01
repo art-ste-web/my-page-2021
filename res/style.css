@@ -75,6 +75,31 @@ h2 {
     margin-right: 4rem;
 }
 
+/*language selector*/
+.navbar .lang-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar .lang-select div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    padding: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.selected-lang {
+    background-color: var(--header-underline-blue);
+    font-weight: 500;
+    color: var(--text-white);
+}
+
 .first-screen {
     display: flex;
     height: 100vh;
