@@ -30,14 +30,33 @@ $(function() {
 });
 
 //switch language
+
 const langBtns = document.querySelectorAll(".lang-btn");
-
 for(let i=0; i<langBtns.length; i++) {
-  [i].addEventListener('click',switchLang); 
-}
-console.log(langBtns);
-function switchLang(langItem) {
-  const html = document.getElementsByTagName("html");
-  langItem
+  langBtns[i].addEventListener('click', switchLang);
 }
 
+function switchLang() {
+  for(let i=0; i<langBtns.length; i++) {
+      langBtns[i].classList.remove("selected-lang");
+  }
+  if(!this.classList.contains("selected-lang")) {
+    this.classList.add("selected-lang");
+  };
+  const currentLang = this.innerText;
+  document.documentElement.setAttribute("lang", currentLang);
+  let name = "lang";
+  let value = currentLang;
+  document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
+}
+let lang = '';
+function getCookie(cookieName) {
+  let cookie = {};
+  document.cookie.split(';').forEach(function(el) {
+    let [key,value] = el.split('=');
+    cookie[key.trim()] = value;
+  })
+  console.log(coockie[cookieName]);
+  return cookie[cookieName];
+}
+getCookie(lang);

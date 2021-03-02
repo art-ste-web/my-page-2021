@@ -91,8 +91,12 @@ h2 {
     height: 1rem;
     border-radius: 50%;
     padding: 1rem;
-    margin-right: 1rem;
+    margin-right: .5rem;
     cursor: pointer;
+}
+.navbar .lang-select div:hover {
+    background-color: #003ab852;
+    color: var(--text-white);
 }
 .selected-lang {
     background-color: var(--header-underline-blue);
