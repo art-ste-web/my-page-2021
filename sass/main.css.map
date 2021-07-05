@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,oHAAI;AEAZ,AAAA,gBAAgB,CAAC;EACb,eAAe,EAAE,QAAQ;CAC5B;;ACFD,AAAA,EAAE,CAAC;EACC,WAAW,EFAD,aAAa,EAAE,KAAK;CECjC",
+    "sources": [
+        "main.scss",
+        "base/_fonts.scss",
+        "abstracts/_variables.scss",
+        "components/_navbar.scss",
+        "components/_first-screen.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
