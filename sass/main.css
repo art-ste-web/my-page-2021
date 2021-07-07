@@ -5,7 +5,27 @@
           justify-content: flex-end;
 }
 
-h1 {
-  font-family: "Roboto Slab", serif;
+.first-screen {
+  height: 100vh;
+  background: url("../../img/bg-light.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 0;
+  -webkit-box-shadow: inset 3000px 3000px rgba(255, 255, 255, 0.2);
+          box-shadow: inset 3000px 3000px rgba(255, 255, 255, 0.2);
+}
+
+.first-screen .main-content-wrapper {
+  width: 50%;
+  margin: 10% 5%;
+}
+
+.first-screen .main-content-wrapper img {
+  width: 100%;
+}
+
+.first-screen .main-content-wrapper .short-desc {
+  font-size: 1.4rem;
 }
 /*# sourceMappingURL=main.css.map */
