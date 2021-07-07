@@ -15,6 +15,72 @@
         .short-desc {
             font-size: 1.4rem;
         }
+        #header-web-d {
+            width: 100%;
+            animation: fill 2s ease forwards 4s;
+            path {
+                &:nth-child(1) {
+                    stroke-dasharray: 544px;
+                    stroke-dashoffset: 544px;
+                    animation: header-anim 2s ease forwards;
+                }
+                &:nth-child(2) {
+                    stroke-dasharray: 439px;
+                    stroke-dashoffset: 439px;
+                    animation: header-anim 2s ease forwards .3s;
+                }
+                &:nth-child(3) {
+                    stroke-dasharray: 519px;
+                    stroke-dashoffset: 519px;
+                    animation: header-anim 2s ease forwards .6s;
+                }
+                &:nth-child(4) {
+                    stroke-dasharray: 462px;
+                    stroke-dashoffset: 462px;
+                    animation: header-anim 2s ease forwards .9s;
+                }
+                &:nth-child(5) {
+                    stroke-dasharray: 439px;
+                    stroke-dashoffset: 439px;
+                    animation: header-anim 2s ease forwards 1.2s;
+                }
+                &:nth-child(6) {
+                    stroke-dasharray: 440px;
+                    stroke-dashoffset: 440px;
+                    animation: header-anim 2s ease forwards 1.5s;
+                }
+                &:nth-child(7) {
+                    stroke-dasharray: 187px;
+                    stroke-dashoffset: 187px;
+                    animation: header-anim 2s ease forwards 1.8s;
+                }
+                &:nth-child(8) {
+                    stroke-dasharray: 472px;
+                    stroke-dashoffset: 472px;
+                    animation: header-anim 2s ease forwards 2.1s;
+                }
+                &:nth-child(9) {
+                    stroke-dasharray: 478px;
+                    stroke-dashoffset: 478px;
+                    animation: header-anim 2s ease forwards 2.4s;
+                }
+            }
+        }
+        
     }
     
+}
+
+@keyframes header-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: #000;
+    }
 }
