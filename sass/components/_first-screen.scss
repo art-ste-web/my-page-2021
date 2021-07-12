@@ -6,67 +6,105 @@
     background-position: center center;
     padding: 0;
     box-shadow: inset 3000px 3000px rgba($color: #fff, $alpha: .2);
+    @include respond-to(medium) {
+        box-shadow: inset 3000px 3000px rgba($color: #fff, $alpha: .6);
+    }
     .main-content-wrapper {
-        
+        display: flex;
+        justify-content: flex-start;
+
         margin: 10% 5%;
         img {
             width: 100%;
         }
-        .short-desc {
-            font-size: 1.4rem;
-        }
+        
         #header-web-d {
-            width: 100%;
-            animation: fill 2s ease forwards 4s;
+            @include respond-to(medium) { width: 100%; }
+            text-align: left;
+            animation: fill 1s ease forwards 3s;
             path {
                 &:nth-child(1) {
                     stroke-dasharray: 544px;
                     stroke-dashoffset: 544px;
-                    animation: header-anim 2s ease forwards;
+                    animation: header-anim 1s ease forwards;
                 }
                 &:nth-child(2) {
                     stroke-dasharray: 439px;
                     stroke-dashoffset: 439px;
-                    animation: header-anim 2s ease forwards .3s;
+                    animation: header-anim 1s ease forwards .2s;
                 }
                 &:nth-child(3) {
                     stroke-dasharray: 519px;
                     stroke-dashoffset: 519px;
-                    animation: header-anim 2s ease forwards .6s;
+                    animation: header-anim 1s ease forwards .4s;
                 }
                 &:nth-child(4) {
                     stroke-dasharray: 462px;
                     stroke-dashoffset: 462px;
-                    animation: header-anim 2s ease forwards .9s;
+                    animation: header-anim 1s ease forwards .8s;
                 }
                 &:nth-child(5) {
                     stroke-dasharray: 439px;
                     stroke-dashoffset: 439px;
-                    animation: header-anim 2s ease forwards 1.2s;
+                    animation: header-anim 1s ease forwards 1.1s;
                 }
                 &:nth-child(6) {
                     stroke-dasharray: 440px;
                     stroke-dashoffset: 440px;
-                    animation: header-anim 2s ease forwards 1.5s;
+                    animation: header-anim 1s ease forwards 1.3s;
                 }
                 &:nth-child(7) {
                     stroke-dasharray: 187px;
                     stroke-dashoffset: 187px;
-                    animation: header-anim 2s ease forwards 1.8s;
+                    animation: header-anim 1s ease forwards 1.6s;
                 }
                 &:nth-child(8) {
                     stroke-dasharray: 472px;
                     stroke-dashoffset: 472px;
-                    animation: header-anim 2s ease forwards 2.1s;
+                    animation: header-anim 1s ease forwards 1.8s;
                 }
                 &:nth-child(9) {
                     stroke-dasharray: 478px;
                     stroke-dashoffset: 478px;
-                    animation: header-anim 2s ease forwards 2.4s;
+                    animation: header-anim 1s ease forwards 2s;
                 }
             }
         }
         
+        .and-letter {
+            font-family: $main-font;
+            font-size: 2rem;
+            margin-bottom: 0;
+            animation: appear .4s ease forwards 3.25s;
+            opacity: 0;
+        }
+        h2 {
+            font-family: $main-font;
+            font-size: 3rem;
+            opacity: 0;
+            animation: appear .4s ease forwards 3.25s;
+            @include respond-to(medium) { font-size: 2rem; }
+        }
+        .short-desc {
+            font-size: 1.4rem;
+            animation: appear 2s ease forwards 4s;
+            opacity: 0;
+        }
+        button {
+            background-color: $accent-color;
+            color: #fff;
+            border-radius: 30px;
+            padding:  .8rem 2.4rem;
+            margin-top: 2rem;
+            animation: appear 1s ease forwards 5.5s;
+            opacity: 0;
+            filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.15));
+            transition: all .25s;
+            &:hover {
+                transform: scale(1.1);
+                transition: all .25s;
+            }
+        }
     }
     
 }
@@ -81,6 +119,14 @@
         fill: transparent;
     }
     to {
-        fill: #000;
+        fill: $main-black;
+    }
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

@@ -7,13 +7,14 @@
 const uaText = {
     nav : ["Про мене", "Портфоліо", "Робочий процес"],
     mainDesc : "Інформаційный сайт / сайт-портфоліо /  лендинг / блог / інтернет магазин / графічний дизайн",
+    moreBtn : "Детальніше",
 
 };
 
 const ruText = {
     nav : ["Обо мне", "Портфолио", "Рабочий процесс"],
     mainDesc : "Информационный сайт / сайт-портфолио /  лендинг / блог / интернет магазин / графический дизайн",
-
+    moreBtn : "Узнать больше",
 };
 
 
@@ -23,6 +24,8 @@ const ruText = {
 class LangSwitcher {
     constructor() {
     }
+
+    //local storage methods
     setLangDataToLs(langData, langKey) {
         localStorage.setItem(langKey, JSON.stringify(langData));
     }
@@ -30,6 +33,7 @@ class LangSwitcher {
         const curLang =localStorage.getItem(lang);
         return JSON.parse(curLang);
     }
+    //change elemets lang
     changeNavLang(activeLangData) {
         const navItems = document.querySelectorAll('#navbarNav li a');
         for(let i = 0; i < navItems.length; i++) {
@@ -37,6 +41,13 @@ class LangSwitcher {
         }
         console.log(activeLangData.nav);
     }
+    changeElementsLang(activeLangData) {
+        const mainDesc = document.querySelector('.short-desc');
+        const moreBtn = document.querySelector('.more-btn');
+        mainDesc.innerHTML = activeLangData.mainDesc;
+        moreBtn.innerHTML = activeLangData.moreBtn;
+    }
+    //default lang by client lang
     setDefaultLang() {
         const userLang = navigator.language || navigator.userLanguage;
         console.log(userLang);
@@ -67,5 +78,6 @@ for(let i = 0; i < switchLangBtn.length; i++) {
         console.log(e.target.lang);
         console.log(activeLangData);
         langSwitcher.changeNavLang(activeLangData);
+        langSwitcher.changeElementsLang(activeLangData);
     } )
 }
