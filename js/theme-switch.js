@@ -29,11 +29,11 @@ class ThemeSwitcher {
     }
     setDefualtTheme() {
        let lSthemeValue = localStorage.getItem('theme');
-       
+       const themeSwitch = document.querySelector('.theme-switch');
        
         if(lSthemeValue == 'dark') {
             themeSwitch.checked = true;
-            
+            this.switchTheme();
             console.log(lSthemeValue);
         }
         
@@ -43,3 +43,4 @@ const themeSwitcher = new ThemeSwitcher();
 const themeSwitchBtn = document.querySelector('.theme-switch');
 
 themeSwitchBtn.addEventListener('change', themeSwitcher.switchTheme);
+themeSwitcher.setDefualtTheme();
