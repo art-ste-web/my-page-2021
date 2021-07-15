@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
 /*fonts*/
 /*colors*/
 .navbar {
@@ -239,7 +240,7 @@
 }
 
 .first-screen .main-content-wrapper .and-letter {
-  font-family: "Roboto", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 2rem;
   margin-bottom: 0;
   -webkit-animation: appear .4s ease forwards 3.25s;
@@ -248,7 +249,7 @@
 }
 
 .first-screen .main-content-wrapper h2 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 3rem;
   opacity: 0;
   -webkit-animation: appear .4s ease forwards 3.25s;
@@ -338,21 +339,74 @@
   }
 }
 
-.about-me .about-header {
-  width: 25%;
+.about-me {
+  background-color: #DEDDDD;
 }
 
-.about-me .about-header h1 {
+.about-me .img-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-me .img-wrapper img {
+  border-radius: 50%;
+}
+
+.about-me .about-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 6rem 2rem 0;
+}
+
+.about-me .about-text p {
+  font-size: 1.3rem;
+  font-family: "Rubik", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .about-me .about-text {
+    padding: 1.5rem 1rem;
+  }
+}
+
+.block-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block-header h1 {
+  display: inline-block;
   font-family: "Roboto Slab", serif;
   font-size: 2.2rem;
   font-weight: 700;
   margin: 1rem;
   position: relative;
   z-index: 1;
-  margin: 5rem auto 1.5rem auto;
+  margin: 3rem auto 1rem auto;
 }
 
-.about-me .about-header h1:after {
+.block-header h1:after {
   content: "";
   height: 10px;
   position: absolute;
