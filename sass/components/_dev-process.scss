@@ -1,43 +1,21 @@
 .dev-process  {
+    margin-top: 4rem;
     font-family: $main-font;
+    .row {
+        align-items: center;
+    }
     h2 {
         font-size: 1.5rem;
         font-weight: 500;
     }
     .info-text {
         position: relative;
-    }
-    
-
-}
-.dev-process  {
-    .row {
-        align-items: center;
-    }
-    
-}
-.dev-process {
-    .info-text {
         p {
             margin: 2rem 0 3rem 0;
             font-size: 1.2rem;
         }
-    }
-    
-}
-.dev-process {
-    img {
-        width: 60%;
-        max-width: 410px;
-        display: block;
-        margin: 0 auto 3rem auto;
-    }
-    
-}
-.dev-process {
-    .info-text {
         .number {
-            font-size: 20rem;
+            font-size: 24rem;
             position: absolute;
             font-family: $main-font;
             font-weight: 500;
@@ -46,10 +24,23 @@
             left: 30%;
             top: -60%;
             z-index: -1;
+            line-height: 1;
             @include respond-to('medium') {
-                top: -30%;
-                left: 20%;
+                top: -20%;
+                left: 15%;
             }
         }
     }
+    img {
+        width: 60%;
+        max-width: 410px;
+        display: block;
+        margin: 0 auto 3rem auto;
+        opacity: .9;
+        @include respond-to('medium') {
+            max-width: 50%;
+        }
+    }
+    
+
 }

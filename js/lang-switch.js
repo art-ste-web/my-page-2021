@@ -15,11 +15,24 @@ const uaText = {
     portfolioMoreBtn: "Детальніше про проекти...",
     devProcessHead: "Процес розробки сайту",
     devProcessDesc: "Основні етапи створення сайту",
-    devProcessTzHead: "Складання ТЗ спільно з клієнтом",
-    devProcessTzDesc: `Определение целей и задач сайта, его структуры и содержание,
-        общих требований к дизайну. Определение технических требований,
-        используемые технологии, требования к адаптивности. Предварительный расчет стоимости.`,
-
+    devProcessTzHead: "Складання ТЗ спільно з замовником:",
+    devProcessTzDesc: `Визначення цілей та задач сайту, його структури та змісту,
+        загальних вимог до дизайну. Візначення технічних вимог,
+        які технології будуть використані, вимоги до адаптивності. Попередній розрахунок вартості.`,
+    devProcessStructHead: "Розробка структурного макету:",
+    devProcessStructDesc: `Розташування елементів навігації, основні блоки,
+        їх послідовність, текстове наповнення, створення загального структурного макету.`,
+    devProcessLayoutHead: "Створення графічного дизайн-макету:",
+    devProcessLayoutDesc: `Вибір кольорової схеми для сайту з урахуванням тематики,
+            цільової аудиторії та побажань замовника. Підбір типографіки та графічних матеріалів.
+            Розробка графічного макету та підготовка сайту до верстки.`,
+    devProcessDevHead: "Розробка сайту:",
+    devProcessDevDesc: `Верстка сайту по дизайн-макету, програмування поведінки
+                інтерактивних елементів, розробка додаткових модулей
+                (калькулятори вартості, форми зворотнього зв'язку, чат-боти), інтеграція з CMS.`,
+    devProcessDeployHead: "Розміщення на хостингу, тестування та запуск сайту:",
+    devProcessDeployDesc: `Регістрація доменого імені, налаштування хостингу, підключення SSL сертифікату,
+                    створення бази даних. Початкова SEO оптимізація, тестування та запуск сайту.`,
 
 };
 
@@ -36,7 +49,27 @@ const ruText = {
         этапов выполнения.`,
     portfolioHead: "Портфолио",
     portfolioDesc: "Примеры выполненных проектов",
-    portfolioMoreBtn: "Подробнее о проектах..."
+    portfolioMoreBtn: "Подробнее о проектах...",
+    devProcessHead: "Процесc разработки сайта",
+    devProcessDesc: "Основные этапы создания сайта",
+    devProcessTzHead: "Cоставление ТЗ совместно с заказчиком:",
+    devProcessTzDesc: `Определение целей и задач сайта, его структуры и содержание,
+        общих требований к дизайну. Определение технических требований,
+        используемые технологии, требования к адаптивности. Предварительный расчет стоимости.`,
+    devProcessStructHead: "Разработка структурного макета:",
+    devProcessStructDesc: `Расположение элементов навигации, основные блоки, их последовательность,
+        текстовое наполнение, создание общего структурного макета.`,
+    devProcessLayoutHead: "Создание графического дизайн-макета:",
+    devProcessLayoutDesc: `Выбор цветовой схемы для сайта с учетом тематики,
+        целевой аудитории и пожеланий заказчика. Подбор типографики и графических материалов.
+        Разработка графического макета и подготовка сайта к верстке.`,
+    devProcessDevHead: "Разработка сайта:",
+    devProcessDevDesc: `Верстка сайта по дизайн-макету, программирование поведения
+        интерактивных элементов, разработка дополнительных модулей
+        (калькуляторы стоимости, формы обратной связи, чат-боты), интерграция с CMS.`,
+    devProcessDeployHead: "Размещение на хостинге, тестирование и запуск сайта:",
+    devProcessDeployDesc: `Регистрация доменного имени, настройка хостинга, подключение SSL сертификата,
+        создание базы данных. Базовая SEO оптимизация, тестирование и запуск сайта.`,
 };
 
 
@@ -67,20 +100,52 @@ class LangSwitcher {
         // console.log(activeLangData.nav);
     }
     changeElementsLang(activeLangData) {
+        //first screen
         const mainDesc = document.querySelector('.short-desc');
         const moreBtn = document.querySelector('.more-btn');
+        mainDesc.innerHTML = activeLangData.mainDesc;
+        moreBtn.innerHTML = activeLangData.moreBtn;
+
+        //about
         const aboutMeHeader = document.querySelector('#about .block-header h1');
         const aboutMeText = document.querySelector('.about-text p');
+        aboutMeHeader.innerHTML = activeLangData.aboutMeHeader;
+        aboutMeText.innerHTML = activeLangData.aboutMeText;
+
+        //portfolio
         const portfolioHead = document.querySelector('#portfolio h1');
         const portfolioDesc = document.querySelector('#portfolio p');
         const portfolioBtn = document.querySelector('#portfolio .prjcts-btn');
-        mainDesc.innerHTML = activeLangData.mainDesc;
-        moreBtn.innerHTML = activeLangData.moreBtn;
-        aboutMeHeader.innerHTML = activeLangData.aboutMeHeader;
-        aboutMeText.innerHTML = activeLangData.aboutMeText;
         portfolioHead.innerHTML = activeLangData.portfolioHead;
         portfolioDesc.innerHTML= activeLangData.portfolioDesc;
         portfolioBtn.innerHTML = activeLangData.portfolioMoreBtn;
+
+        //dev process
+        const devHead = document.querySelector('#dev_process h1');
+        const devDecs = document.querySelector('#dev_process .desc');
+        const devTzHead = document.querySelector('#dev_process .dev-tz h2');
+        const devTzDesc = document.querySelector('#dev_process .dev-tz p');
+        const devStructHead = document.querySelector('#dev_process .struct h2');
+        const devStructDesc = document.querySelector('#dev_process .struct p');
+        const devLayoutHead = document.querySelector('#dev_process .layout h2');
+        const devLayoutDesc = document.querySelector('#dev_process .layout p');
+        const devDevHead = document.querySelector('#dev_process .dev h2');
+        const devDevDesc = document.querySelector('#dev_process .dev p');
+        const devDeployHead = document.querySelector('#dev_process .deploy h2');
+        const devDeployDesc = document.querySelector('#dev_process .deploy p');
+        devHead.innerHTML = activeLangData.devProcessHead;
+        devDecs.innerHTML = activeLangData.devProcessDesc;
+        devTzHead.innerHTML = activeLangData.devProcessTzHead;
+        devTzDesc.innerHTML = activeLangData.devProcessTzDesc;
+        devStructHead.innerHTML = activeLangData.devProcessStructHead;
+        devStructDesc.innerHTML = activeLangData.devProcessStructDesc;
+        devLayoutHead.innerHTML = activeLangData.devProcessLayoutHead;
+        devLayoutDesc.innerHTML = activeLangData.devProcessLayoutDesc;
+        devDevHead.innerHTML = activeLangData.devProcessDevHead;
+        devDevDesc.innerHTML = activeLangData.devProcessDevDesc;
+        devDeployHead.innerHTML = activeLangData.devProcessDeployHead;
+        devDeployDesc.innerHTML = activeLangData.devProcessDeployDesc;
+                
     }
     addActiveLangBtnState(activeLang) {
         this.resetLangBtnState();

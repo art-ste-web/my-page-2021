@@ -65,4 +65,55 @@
             background-color: $medium-blue !important;
         }
     }
+    .prjcts-btn {
+        border: 1px solid $header-yellow !important;
+        color: $header-yellow !important;
+        &:hover {
+            background: $medium-blue !important;
+            color: $main-white !important;
+            border: 1px solid $medium-blue !important;
+        }
+    }
+    
+}
+
+.dark-dev {
+    h1 {
+        color: $main-white !important;
+        &:after {
+            background-color: $medium-blue !important;
+        }
+    }
+    .info-text {
+        p, h2 {
+            color: $main-white !important;
+        }
+        .number {
+            color: rgba(44, 130, 201, .3) !important;
+        }
+    }
+    img {
+        opacity: .8;
+    }
+}
+
+.dark-blog {
+    h1 {
+        color: $main-white !important;
+        &:after {
+            background-color: $medium-blue !important;
+        }
+    }
+    .second-line {
+        color: $main-white !important;
+    }
+    button {
+        border: 1px solid $header-yellow !important;
+        color: $header-yellow !important;
+        &:hover {
+            background: $medium-blue !important;
+            color: $main-white !important;
+            border: 1px solid $medium-blue !important;
+        }
+    }
 }
