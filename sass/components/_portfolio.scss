@@ -1,0 +1,18 @@
+.carousel {
+    max-width: 1024px;
+    .carousel-item {
+        
+    }
+}
+.all-projects-btn {
+    margin-top: 2rem;
+    a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        button {
+            border-radius: 30px;
+            padding: .7rem 2rem;
+        }
+    }
+}

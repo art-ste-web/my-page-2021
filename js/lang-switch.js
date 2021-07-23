@@ -1,8 +1,3 @@
-// const uaText = {
-//     nav : { item1 : "Про мене", item2 : "Портфоліо", item3 : "Робочий процес" },
-//     mainDesc : "Інформаційный сайт / сайт-портфоліо /  лендинг / блог / інтернет магазин / графічний дизайн",
-
-// };
 
 const uaText = {
     nav : ["Про мене", "Портфоліо", "Робочий процес", "Блог", "Контакти"],
@@ -15,6 +10,16 @@ const uaText = {
         Роботу над проектом завжди організовую таким чином, щоб замовник міг 
         контролювати процес виконання проекту та брати участь у його реалізації на кожному з 
         этапів виконання.`,
+    portfolioHead: "Портфоліо",
+    portfolioDesc: "Приклади реалізованих проектів",
+    portfolioMoreBtn: "Детальніше про проекти...",
+    devProcessHead: "Процес розробки сайту",
+    devProcessDesc: "Основні етапи створення сайту",
+    devProcessTzHead: "Складання ТЗ спільно з клієнтом",
+    devProcessTzDesc: `Определение целей и задач сайта, его структуры и содержание,
+        общих требований к дизайну. Определение технических требований,
+        используемые технологии, требования к адаптивности. Предварительный расчет стоимости.`,
+
 
 };
 
@@ -29,6 +34,9 @@ const ruText = {
         Работу над проектом всегда организовываю таким образом, чтобы заказчик мог 
         контроллировать процесс выполнения проекта и участвовать в его реализации на каждом из 
         этапов выполнения.`,
+    portfolioHead: "Портфолио",
+    portfolioDesc: "Примеры выполненных проектов",
+    portfolioMoreBtn: "Подробнее о проектах..."
 };
 
 
@@ -63,10 +71,16 @@ class LangSwitcher {
         const moreBtn = document.querySelector('.more-btn');
         const aboutMeHeader = document.querySelector('#about .block-header h1');
         const aboutMeText = document.querySelector('.about-text p');
+        const portfolioHead = document.querySelector('#portfolio h1');
+        const portfolioDesc = document.querySelector('#portfolio p');
+        const portfolioBtn = document.querySelector('#portfolio .prjcts-btn');
         mainDesc.innerHTML = activeLangData.mainDesc;
         moreBtn.innerHTML = activeLangData.moreBtn;
         aboutMeHeader.innerHTML = activeLangData.aboutMeHeader;
         aboutMeText.innerHTML = activeLangData.aboutMeText;
+        portfolioHead.innerHTML = activeLangData.portfolioHead;
+        portfolioDesc.innerHTML= activeLangData.portfolioDesc;
+        portfolioBtn.innerHTML = activeLangData.portfolioMoreBtn;
     }
     addActiveLangBtnState(activeLang) {
         this.resetLangBtnState();

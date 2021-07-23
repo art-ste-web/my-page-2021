@@ -1,7 +1,9 @@
 .block-header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    
     h1 {
         display: inline-block;
         font-family: $header-font;
@@ -17,10 +19,17 @@
             height: 10px;
             position: absolute;
             background-color: $header-yellow;
-            width: 100%;
-            bottom: 5px;
-            left: 0;
+            width: 110%;
+            bottom: 4px;
+            left: -5%;
             z-index: -1;
         }
+    }
+    p {
+        text-align: center;
+        font-size: 1.2rem;
+        font-family: $main-font;
+        color: $medium-grey;
+        margin-bottom: 2rem;
     }
 }

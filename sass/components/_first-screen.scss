@@ -6,6 +6,7 @@
     background-position: center center;
     padding: 0;
     box-shadow: inset 3000px 3000px rgba($color: #fff, $alpha: .2);
+    overflow: hidden;
     @include respond-to(medium) {
         box-shadow: inset 3000px 3000px rgba($color: #fff, $alpha: .6);
     }
@@ -13,7 +14,10 @@
         display: flex;
         justify-content: flex-start;
 
-        margin: 10% 5%;
+        padding: 10% 5%;
+        @include respond-to(medium) {
+            padding: 25% 5%;
+        }
         img {
             width: 100%;
         }

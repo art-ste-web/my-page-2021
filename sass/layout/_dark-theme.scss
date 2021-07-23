@@ -1,3 +1,6 @@
+.dark-bg {
+    background: $background-dark !important;
+}
 .dark-nav {
     background-color: rgba(13, 17, 23, 0.7) !important;
     .navbar-toggler {
@@ -42,4 +45,24 @@
         color: $light-grey;
     }
     
+}
+.dark-about-me {
+    background-color: $dark-blue !important;
+    color: $main-white !important;
+    h1 {
+        color: $main-white !important;
+        &:after {
+            background-color: $medium-blue !important;
+        }
+    }
+}
+
+.dark-portfolio {
+    // background-color: $background-dark !important;
+    h1 {
+        color: $main-white !important;
+        &:after {
+            background-color: $medium-blue !important;
+        }
+    }
 }

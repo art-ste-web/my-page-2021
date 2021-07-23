@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 /*fonts*/
 /*colors*/
 .navbar {
   -webkit-box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.8) !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1020;
 }
 
 .navbar .navbar-brand {
@@ -141,6 +146,7 @@
   padding: 0;
   -webkit-box-shadow: inset 3000px 3000px rgba(255, 255, 255, 0.2);
           box-shadow: inset 3000px 3000px rgba(255, 255, 255, 0.2);
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -157,7 +163,13 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin: 10% 5%;
+  padding: 10% 5%;
+}
+
+@media (max-width: 768px) {
+  .first-screen .main-content-wrapper {
+    padding: 25% 5%;
+  }
 }
 
 .first-screen .main-content-wrapper img {
@@ -341,6 +353,7 @@
 
 .about-me {
   background-color: #DEDDDD;
+  padding-bottom: 3rem;
 }
 
 .about-me .img-wrapper {
@@ -387,6 +400,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -411,10 +428,95 @@
   height: 10px;
   position: absolute;
   background-color: #F3C10F;
-  width: 100%;
-  bottom: 5px;
-  left: 0;
+  width: 110%;
+  bottom: 4px;
+  left: -5%;
   z-index: -1;
+}
+
+.block-header p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Rubik", sans-serif;
+  color: #a5a5a5;
+  margin-bottom: 2rem;
+}
+
+.carousel {
+  max-width: 1024px;
+}
+
+.all-projects-btn {
+  margin-top: 2rem;
+}
+
+.all-projects-btn a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.all-projects-btn a button {
+  border-radius: 30px;
+  padding: .7rem 2rem;
+}
+
+.dev-process {
+  font-family: "Rubik", sans-serif;
+}
+
+.dev-process h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.dev-process .info-text {
+  position: relative;
+}
+
+.dev-process .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dev-process .info-text p {
+  margin: 2rem 0 3rem 0;
+  font-size: 1.2rem;
+}
+
+.dev-process img {
+  width: 60%;
+  max-width: 410px;
+  display: block;
+  margin: 0 auto 3rem auto;
+}
+
+.dev-process .info-text .number {
+  font-size: 20rem;
+  position: absolute;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  color: rgba(2, 180, 41, 0.2);
+  top: 0;
+  left: 30%;
+  top: -60%;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .dev-process .info-text .number {
+    top: -30%;
+    left: 20%;
+  }
+}
+
+.dark-bg {
+  background: #0D1117 !important;
 }
 
 .dark-nav {
@@ -458,5 +560,26 @@
 
 .dark-first-screen h2 {
   color: #c4c4c4;
+}
+
+.dark-about-me {
+  background-color: #00325B !important;
+  color: #f2f2f2 !important;
+}
+
+.dark-about-me h1 {
+  color: #f2f2f2 !important;
+}
+
+.dark-about-me h1:after {
+  background-color: #1B72BA !important;
+}
+
+.dark-portfolio h1 {
+  color: #f2f2f2 !important;
+}
+
+.dark-portfolio h1:after {
+  background-color: #1B72BA !important;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,55 @@
+.dev-process  {
+    font-family: $main-font;
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .info-text {
+        position: relative;
+    }
+    
+
+}
+.dev-process  {
+    .row {
+        align-items: center;
+    }
+    
+}
+.dev-process {
+    .info-text {
+        p {
+            margin: 2rem 0 3rem 0;
+            font-size: 1.2rem;
+        }
+    }
+    
+}
+.dev-process {
+    img {
+        width: 60%;
+        max-width: 410px;
+        display: block;
+        margin: 0 auto 3rem auto;
+    }
+    
+}
+.dev-process {
+    .info-text {
+        .number {
+            font-size: 20rem;
+            position: absolute;
+            font-family: $main-font;
+            font-weight: 500;
+            color: rgba(2, 180, 41, 0.2);
+            top: 0;
+            left: 30%;
+            top: -60%;
+            z-index: -1;
+            @include respond-to('medium') {
+                top: -30%;
+                left: 20%;
+            }
+        }
+    }
+}

@@ -6,25 +6,36 @@ class ThemeSwitcher {
     }
     
     switchTheme() {
+        const pageBody = document.querySelector('.page-body');
         const themeSwitch = document.querySelector('.theme-switch');
         const navBar = document.querySelector('.navbar');
         const logo = document.querySelector('.navbar-brand img');
         const firstScreen = document.querySelector('.first-screen');
+        const aboutBlock = document.querySelector('.about-me');
+        const portfolioBlock = document.querySelector('.portfolio');
+        const portfolioSlider = document.querySelector('.portfolio .carousel');
         
         if(themeSwitch.checked == true) {
             localStorage.setItem('theme', 'dark');
             console.log('dark');
+            pageBody.classList.add('dark-bg');
             navBar.classList.add('dark-nav');
             logo.src = 'img/logo-dark.png';
             firstScreen.classList.add('dark-first-screen');
-            
+            aboutBlock.classList.add('dark-about-me');
+            portfolioBlock.classList.add('dark-portfolio');
+            portfolioSlider.classList.remove('carousel-dark');
         }
         else {
             localStorage.setItem('theme', 'light');
             console.log('light');
+            pageBody.classList.remove('dark-bg');
             navBar.classList.remove('dark-nav');
             logo.src = 'img/logo.png';
             firstScreen.classList.remove('dark-first-screen');
+            aboutBlock.classList.remove('dark-about-me');
+            portfolioBlock.classList.remove('dark-portfolio');
+            portfolioSlider.classList.add('carousel-dark');
         }
     }
     setDefualtTheme() {
