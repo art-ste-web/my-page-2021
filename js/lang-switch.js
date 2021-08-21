@@ -33,7 +33,9 @@ const uaText = {
     devProcessDeployHead: "Розміщення на хостингу, тестування та запуск сайту:",
     devProcessDeployDesc: `Регістрація доменого імені, налаштування хостингу, підключення SSL сертифікату,
                     створення бази даних. Початкова SEO оптимізація, тестування та запуск сайту.`,
-
+    blogHead: "Мій блог",
+    blogDesc: "Корисна інформація про web-дизайн, верстку та програмування:",
+    blogBtnTxt: "Всі записи блога...",
 };
 
 const ruText = {
@@ -70,6 +72,9 @@ const ruText = {
     devProcessDeployHead: "Размещение на хостинге, тестирование и запуск сайта:",
     devProcessDeployDesc: `Регистрация доменного имени, настройка хостинга, подключение SSL сертификата,
         создание базы данных. Базовая SEO оптимизация, тестирование и запуск сайта.`,
+    blogHead: "Мой блог",
+    blogDesc: "Полезная информация о web-дизайне, верстке и программировании:",
+    blogBtnTxt: "Все записи блога...",
 };
 
 
@@ -145,6 +150,14 @@ class LangSwitcher {
         devDevDesc.innerHTML = activeLangData.devProcessDevDesc;
         devDeployHead.innerHTML = activeLangData.devProcessDeployHead;
         devDeployDesc.innerHTML = activeLangData.devProcessDeployDesc;
+
+        //blog
+        const blogHead = document.querySelector('.blog h1');
+        const blogDesc = document.querySelector('.blog p');
+        const blogBtn = document.querySelector('.blog button');
+        blogHead.innerHTML = activeLangData.blogHead;
+        blogDesc.innerHTML = activeLangData.blogDesc;
+        blogBtn.innerHTML = activeLangData.blogBtnTxt;
                 
     }
     addActiveLangBtnState(activeLang) {

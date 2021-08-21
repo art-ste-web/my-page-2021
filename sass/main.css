@@ -5,7 +5,7 @@
 .navbar {
   -webkit-box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.8) !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -611,6 +611,101 @@
 .blog .blog-btn button {
   border-radius: 32px;
   padding: .7rem 2rem;
+}
+
+.my-contacts .contact-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.my-contacts .contact-links .contact-link-wrapper a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #444444;
+  margin-top: 1rem;
+}
+
+.my-contacts .contact-links .contact-link-wrapper a p {
+  text-align: center;
+  margin-top: .7rem;
+  font-family: var(--main-font);
+}
+
+.my-contacts .contact-links .contact-link-wrapper .contact-link-icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.my-contacts .contact-links .contact-link-wrapper .contact-link-icon img {
+  height: 3rem;
+}
+
+.my-contacts .contact-links .contact-link-wrapper .contact-link-icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.my-contacts .contact-links .contact-link-wrapper .phone {
+  background-color: #02B429;
+  padding-left: .5rem;
+}
+
+.my-contacts .contact-links .contact-link-wrapper .viber {
+  background-color: #583EB5;
+}
+
+.my-contacts .contact-links .contact-link-wrapper .telegram {
+  background-color: #33ABE0;
+}
+
+.my-contacts .contact-links .contact-link-wrapper .whatsapp {
+  background-color: #20CB42;
+}
+
+.my-contacts .contact-links .contact-link-wrapper .skype {
+  background-color: #00b5eb;
+}
+
+.my-contacts .contact-links .contact-link-wrapper .instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
 .dark-bg {
