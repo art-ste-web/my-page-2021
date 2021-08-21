@@ -139,7 +139,7 @@
 
 .first-screen {
   height: 100vh;
-  background: url("/../../img/bg-light.jpg");
+  background: url("../../img/bg-light.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -828,5 +828,21 @@
   background: #1B72BA !important;
   color: #f2f2f2 !important;
   border: 1px solid #1B72BA !important;
+}
+
+.dark-contacts h1 {
+  color: #f2f2f2 !important;
+}
+
+.dark-contacts h1:after {
+  background-color: #1B72BA !important;
+}
+
+.dark-contacts .contact-link-wrapper p {
+  color: #c4c4c4;
+}
+
+.dark-contacts .contact-link-wrapper .contact-link-icon {
+  opacity: .8;
 }
 /*# sourceMappingURL=main.css.map */

@@ -31,11 +31,14 @@ const uaText = {
                 інтерактивних елементів, розробка додаткових модулей
                 (калькулятори вартості, форми зворотнього зв'язку, чат-боти), інтеграція з CMS.`,
     devProcessDeployHead: "Розміщення на хостингу, тестування та запуск сайту:",
-    devProcessDeployDesc: `Регістрація доменого імені, налаштування хостингу, підключення SSL сертифікату,
+    devProcessDeployDesc: `Реєстрація доменого імені, налаштування хостингу, підключення SSL сертифікату,
                     створення бази даних. Початкова SEO оптимізація, тестування та запуск сайту.`,
     blogHead: "Мій блог",
     blogDesc: "Корисна інформація про web-дизайн, верстку та програмування:",
     blogBtnTxt: "Всі записи блога...",
+    contactsHead: "Контакти",
+    contactsDesc: "Выберіть зручний для Вас спосіб зв'язку зі мною і я відповім на всі питання, що Вас цікавлять",
+    contactsPhoneTxt: "Зателефонувати <br>+38(095)566-10-02",
 };
 
 const ruText = {
@@ -75,6 +78,9 @@ const ruText = {
     blogHead: "Мой блог",
     blogDesc: "Полезная информация о web-дизайне, верстке и программировании:",
     blogBtnTxt: "Все записи блога...",
+    contactsHead: "Контакты",
+    contactsDesc: "Выберите удобный для Вас способ и свяжитесь со мной, отвечу на все интересующие Вас вопросы",
+    contactsPhoneTxt: "Позвонить <br>+38(095)566-10-02",
 };
 
 
@@ -158,6 +164,14 @@ class LangSwitcher {
         blogHead.innerHTML = activeLangData.blogHead;
         blogDesc.innerHTML = activeLangData.blogDesc;
         blogBtn.innerHTML = activeLangData.blogBtnTxt;
+
+        //contacts
+        const contactsHead = document.querySelector('.my-contacts .block-header h1');
+        const contactsDesc = document.querySelector('.my-contacts .block-header p');
+        const contactsPhoneText = document.querySelector('.my-contacts .phone-txt');
+        contactsHead.innerHTML = activeLangData.contactsHead;
+        contactsDesc.innerHTML = activeLangData.contactsDesc;
+        contactsPhoneText.innerHTML = activeLangData.contactsPhoneTxt;
                 
     }
     addActiveLangBtnState(activeLang) {

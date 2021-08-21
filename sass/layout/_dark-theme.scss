@@ -117,3 +117,20 @@
         }
     }
 }
+
+.dark-contacts {
+    h1 {
+        color: $main-white !important;
+        &:after {
+            background-color: $medium-blue !important;
+        }
+    }
+    .contact-link-wrapper {
+        p {
+            color: $light-grey;
+        }
+        .contact-link-icon {
+            opacity: .8;
+        }
+    }
+}

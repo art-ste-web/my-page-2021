@@ -16,6 +16,7 @@ class ThemeSwitcher {
         const portfolioSlider = document.querySelector('.portfolio .carousel');
         const devProcessBlock = document.querySelector('.dev-process');
         const blogBlock = document.querySelector('.blog');
+        const contactsBlock = document.querySelector('.my-contacts');
         
         if(themeSwitch.checked == true) {
             localStorage.setItem('theme', 'dark');
@@ -29,6 +30,7 @@ class ThemeSwitcher {
             portfolioSlider.classList.remove('carousel-dark');
             devProcessBlock.classList.add('dark-dev');
             blogBlock.classList.add('dark-blog');
+            contactsBlock.classList.add('dark-contacts');
         }
         else {
             localStorage.setItem('theme', 'light');
@@ -42,6 +44,7 @@ class ThemeSwitcher {
             portfolioSlider.classList.add('carousel-dark');
             devProcessBlock.classList.remove('dark-dev');
             blogBlock.classList.remove('dark-blog');
+            contactsBlock.classList.remove('dark-contacts');
         }
     }
     setDefualtTheme() {
