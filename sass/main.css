@@ -428,9 +428,9 @@
   height: 10px;
   position: absolute;
   background-color: #F3C10F;
-  width: 110%;
+  width: 101%;
   bottom: 4px;
-  left: -5%;
+  left: -1%;
   z-index: -1;
 }
 
