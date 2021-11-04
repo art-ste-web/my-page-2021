@@ -1,11 +1,13 @@
 .navbar {
+    background-color: rgba($color: #fff, $alpha: .9);
     @include screen-size("desk") {
-        background: khaki;
+        display: flex;
+        justify-content: flex-end;
     }
     &__logo {
+        margin: 0 auto 0 0;
         img {
             width: 190px;
         }
     }
-    
 }
