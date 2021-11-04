@@ -1,0 +1,15 @@
+.lang-switcher {
+    margin: 0 2rem;
+    &__btn {
+        border-radius: 50%;
+        height: 2.4rem;
+        width: 2.4rem;
+        background-color: $medium-grey;
+        color: $main-white;
+        padding: .5rem;
+        outline: none;
+        border: none;
+        font-size: 1.1rem;
+        padding-top: .3rem;
+    }
+}

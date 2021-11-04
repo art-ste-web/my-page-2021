@@ -1,0 +1,21 @@
+.navmenu {
+    list-style-type: none;
+    font-family: $main-font;
+    color: $main-black;
+    padding-left: 2rem;
+    &__item {
+        padding: .5rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+            color: $dark-blue;
+        }
+        &--active {
+            @extend .navmenu__link;
+            font-weight: 700;
+        }
+    }
+}

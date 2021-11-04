@@ -1,0 +1,24 @@
+//media queries
+
+@mixin screen-size($breakpoint) {
+    $mob-size: 360px;
+    $tab-size: 768px;
+    $desk-size: 1024px;
+    @if $breakpoint == "mob" {
+      @media (min-width: $mob-size) {
+        @content;
+      }
+    }
+  
+    @else if $breakpoint == "tab" {
+      @media (min-width: $tab-size) {
+        @content;
+      }
+    }
+  
+    @else if $breakpoint == "desk" {
+      @media (min-width: $desk-size) {
+        @content;
+      }
+    }
+  }

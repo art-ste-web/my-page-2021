@@ -1,0 +1,11 @@
+.navbar {
+    @include screen-size("desk") {
+        background: khaki;
+    }
+    &__logo {
+        img {
+            width: 190px;
+        }
+    }
+    
+}
