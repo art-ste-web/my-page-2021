@@ -3,6 +3,7 @@
     align-items: center;
     padding: 1rem;
     background-color: rgba($color: $navbar-white, $alpha: .9);
+    
     @include screen-size("desk") {
         display: flex;
         justify-content: flex-end;

@@ -10,6 +10,9 @@
         @include screen-size("desk") {
             width: auto;
         }
+        @include screen-size("tab") {
+            width: 50%;
+        }
         path {
             &:nth-child(1) {
                 stroke-dasharray: 544px;
@@ -63,20 +66,50 @@
         font-family: $main-font;
         font-size: 2rem;
         margin-bottom: 0;
+        margin-top: 0;
         animation: appear .4s ease forwards 3.25s;
         opacity: 0;
+        @include screen-size("desk") {
+            margin-top: 1rem;
+        }
+        @include screen-size("tab") {
+            font-size: 1.6rem;
+        }
     }
 
     &__small-heading {
         font-family: $main-font;
-        font-size: 3rem;
+        font-size: 2rem;
+        margin: 1rem 0;
         opacity: 0;
         animation: appear .4s ease forwards 3.25s;
+        z-index: 0;
+        @include screen-size("desk") {
+            font-size: 2.4rem;
+        }
     }
 
     &__description {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         animation: appear 2s ease forwards 4s;
         opacity: 0;
+        @include screen-size("desk") {
+            width: 80%;
+        }
+    }
+
+    &__btn {
+        @include button;
+        background-color: $accent-color;
+        color: #fff;
+        margin-top: 1rem;
+        animation: appear 1s ease forwards 5.5s;
+        opacity: 0;
+        filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.15));
+        transition: all .25s;
+        &:hover {
+            transform: scale(1.1);
+            transition: all .25s;
+        }
     }
 }

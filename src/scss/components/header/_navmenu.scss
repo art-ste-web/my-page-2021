@@ -13,7 +13,7 @@
         width: 26px;
         height: 26px;
         cursor: pointer;
-        z-index: 1;
+        z-index: 2;
         @include screen-size("desk") {
             display: none;
         }
@@ -31,6 +31,7 @@
     &__menu-toggle-btn > span::before {
         content: '';
         top: -8px;
+        
     }
     &__menu-toggle-btn > span::after {
         content: '';
@@ -78,10 +79,10 @@
         width: 300px;
         height: 100vh;
         margin: 0;
-        background-color: rgba($color: $navbar-white, $alpha: .9);
+        background-color: rgba($color: $navbar-white, $alpha: .95);
         box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
         transition-duration: .25s;
-
+        z-index: 1;
         @include screen-size("desk") {
             padding: 0;
             width: auto;

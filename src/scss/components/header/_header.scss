@@ -4,7 +4,9 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    box-shadow: inset 3000px 3000px rgba($color: #fff, $alpha: .2);
-    overflow: hidden;
+    box-shadow: inset 3000px 3000px rgba($color: #fff, $alpha: .4);
     
+    @include screen-size("desk") {
+        box-shadow: inset 3000px 3000px rgba($color: #fff, $alpha: .25);
+    }
 }
