@@ -1,8 +1,12 @@
 .theme-switcher {
     display: flex;
     align-items: center;
-    margin-left: 2rem;
-    margin-top: 1rem;
+    transform: scale(.9);
+    margin-right: 2rem;
+    padding: .5rem 0;
+    @include screen-size("desk") {
+        margin: 0 1rem;
+    }
 
     &__switcher {
         position: relative;
@@ -16,17 +20,28 @@
         opacity: 0;
         width: 0;
         height: 0;
-        &:checked {
-            + .theme-switcher__slider {
-                background-color: $medium-blue;
-            }
-            + .theme-switcher__slider {
-                &::before {
-                    transform: translateX(26px);
-                }
-            }
-        }
     }
+    
+    &__icon-dark {
+        opacity: .2;
+    }
+
+    //toggle button animation
+    &__checkbox:checked ~ &__switcher > &__slider {
+        background-color: $medium-blue;
+    }
+    &__checkbox:checked ~ &__switcher > &__slider::before {
+        transform: translateX(26px);
+    }
+
+    //toggle icons opacity
+    &__checkbox:checked ~ &__icon-light {
+        opacity: .3;
+    }
+    &__checkbox:checked ~ &__icon-dark {
+        opacity: 1;
+    }
+
     &__slider {
         position: absolute;
         cursor: pointer;

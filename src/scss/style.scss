@@ -3,6 +3,7 @@
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 @import 'base/global';
+@import 'base/animations';
 
 //header
 @import 'components/header/header';
@@ -10,3 +11,4 @@
 @import 'components/header/navmenu';
 @import 'components/header/lang-switcher';
 @import 'components/header/theme-switcher';
+@import 'components/header/start-screen';
