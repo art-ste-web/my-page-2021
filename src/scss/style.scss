@@ -1,14 +1,6 @@
-@import 'base/normalize';
-@import 'base/fonts';
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
-@import 'base/global';
-@import 'base/animations';
+@use 'base';
 
 //header
-@import 'components/header/header';
-@import 'components/header/navbar';
-@import 'components/header/navmenu';
-@import 'components/header/lang-switcher';
-@import 'components/header/theme-switcher';
-@import 'components/header/start-screen';
+@use '../scss/components/header';
+//content
+@use '../scss/components/main-content';

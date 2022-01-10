@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 //global button
 @mixin button {
     font-size: 1.1rem;
@@ -5,6 +7,29 @@
     border-radius: 2rem;
      border: none;
      cursor: pointer;
+}
+
+//main headings
+@mixin main-heading {
+  text-align: center;
+  display: inline-block;
+  font-family: $header-font;
+  font-size: 2.2rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  margin: 2rem auto 1rem auto;
+  
+  &:after {
+      content: "";
+      height: 10px;
+      position: absolute;
+      background-color: $header-yellow;
+      width: 101%;
+      bottom: 4px;
+      left: -1%;
+      z-index: -1;
+  }
 }
 
 //media queries

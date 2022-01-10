@@ -1,3 +1,7 @@
+
+@use '../abstracts' as *;
+
 body {
     font-family: $main-font;
+    min-width: 320px;
 }

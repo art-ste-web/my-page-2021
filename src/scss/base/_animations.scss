@@ -1,3 +1,6 @@
+@use '../abstracts' as *;
+
+
 @keyframes header-anim {
     to {
         stroke-dashoffset: 0;

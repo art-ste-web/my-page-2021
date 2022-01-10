@@ -1,3 +1,5 @@
+@use '../../abstracts' as *;
+
 .navmenu {
     @include screen-size("desk") {
         display: flex;
